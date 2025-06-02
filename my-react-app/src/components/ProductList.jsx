@@ -75,7 +75,7 @@ function ProductList({ products, onEdit, onDelete, onToggleStatus }) {
         ) : (
           <div className="list-group list-group-flush">
             {displayProducts.map((product, index) => (
-              <div key={product.id} className={index === displayProducts.length - 1 ? '' : ''}>
+              <div key={product.id}>
                 <ProductItem
                   product={product}
                   onEdit={onEdit}

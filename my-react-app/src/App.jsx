@@ -70,10 +70,13 @@ function App() {
 
   // Hàm mở modal xác nhận xóa
   const handleDeleteProduct = (id) => {
-    setDeleteModal({
-      isOpen: true,
-      productId: id
-    })
+    // setDeleteModal({
+    //   isOpen: true,
+    //   productId: id
+    // })
+    setProducts(prevProducts =>
+      prevProducts.filter(product => product.id !==id)
+    )
   }
 
   // Hàm xác nhận xóa sản phẩm
@@ -134,13 +137,13 @@ function App() {
       </div>
 
       {/* Modal xác nhận xóa */}
-      <ConfirmModal
+      {/* <ConfirmModal
         isOpen={deleteModal.isOpen}
         title="Xác nhận xóa sản phẩm"
         message="Bạn có chắc chắn muốn xóa sản phẩm này? Hành động này không thể hoàn tác."
         onConfirm={confirmDelete}
         onCancel={cancelDelete}
-      />
+      /> */}
     </div>
   )
 }
