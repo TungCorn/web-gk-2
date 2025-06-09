@@ -21,9 +21,7 @@ function ProductList({ products, onEdit, onDelete, onToggleStatus }) {
       filteredProducts = [...filteredProducts].sort((a, b) => b.price - a.price)
     } else if (sortBy === 'name') {
       filteredProducts = [...filteredProducts].sort((a, b) => a.name.localeCompare(b.name))
-    } else if (sortBy === 'status') {
-      filteredProducts = [...filteredProducts].sort((a, b) => a.status.localeCompare(b.status))
-    }
+    } 
 
     return filteredProducts
   }
@@ -50,7 +48,6 @@ function ProductList({ products, onEdit, onDelete, onToggleStatus }) {
               <option value="name">Tên sản phẩm (A-Z)</option>
               <option value="price-asc">Giá (Thấp đến Cao)</option>
               <option value="price-desc">Giá (Cao đến Thấp)</option>
-              <option value="status">Trạng thái</option>
             </select>
           </div>
           <div className="col-md-6">

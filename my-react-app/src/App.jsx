@@ -115,7 +115,7 @@ function App() {
       
       {/* Form thêm/sửa sản phẩm */}
       <div className="row justify-content-center mb-4">
-        <div className="col-md-6">
+        <div className="col-md-10">
           <ProductForm
             onAddProduct={handleAddProduct}
             onUpdateProduct={handleUpdateProduct}
@@ -126,7 +126,7 @@ function App() {
       </div>
       
       <div className="row justify-content-center">
-        <div className="col-md-8">
+        <div className="col-md-10">
           <ProductList
             products={products}
             onEdit={handleEditProduct}

@@ -8,7 +8,7 @@ function ProductItem({ product, onEdit, onDelete, onToggleStatus }) {
       <div className="flex-grow-1">
         <h6 className="mb-1 fw-bold">{product.name}</h6>
         <p className="mb-1 text-muted small">{product.description}</p>
-        <div className="d-flex align-items-center gap-2">
+        <div className="d-flex flex-column">
           <span className="fw-bold">Giá: {formatPrice(product.price)}</span>
           <span className="small text-muted">Trạng thái: {product.status}</span>
         </div>
